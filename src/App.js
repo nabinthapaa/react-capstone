@@ -1,11 +1,15 @@
-import './App.css';
-import logo from './logo.svg';
+import React from 'react';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Main from './components/Main';
 
 function App() {
   return (
-    <div className="App">
-      Little Lemon
-    </div>
+    <React.Fragment className="App">
+      <Header />
+      <Main />
+      <Footer />
+    </React.Fragment>
   );
 }
 
