@@ -3,9 +3,9 @@ import Nav from './Nav'
 
 function Header() {
     return (
-        <header>
+        <header className='header'>
             <div>
-                <img src='' alt='little lemon logo' />
+                <img src='/assets/logo.svg' alt='little lemon logo' />
             </div>
             <Nav />
         </header>
