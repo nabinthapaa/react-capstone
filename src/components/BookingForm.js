@@ -22,7 +22,7 @@ function BookingForm({ data, changeData, handleSubmit, disabled }) {
                             <input className='form-input' type='number' min={1} value={data.noOfPerson} onChange={e => changeData({ ...data, noOfPerson: e.target.value })} />
                         </label>
                         <label className='form-group'>
-                            <span className='reg_span'>Occasion</span>
+                            <span className='reg_span'>Occassion:</span>
                             <select className='form-input' value={data.occassion} onChange={e => changeData({ ...data, occassion: e.target.value, })} >
                                 <Options />
                             </select>

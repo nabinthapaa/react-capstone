@@ -6,7 +6,7 @@ import { OCCASSION } from '../constants/options';
 import { ValidateRegistration } from '../utils/utils';
 
 
-const defaultData = {
+export const defaultData = {
     date: new Date().toISOString().split('T')[0],
     time: "10:00",
     noOfPerson: 2,
