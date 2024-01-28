@@ -8,6 +8,12 @@ body {
 
   --max-width: 60vw;
   --min-width: 300px;
+  /* Colors */
+  --primary-green: #4a5e57;
+  --primary-yellow: #f4ce14;
+  --secondary-orange: #ea9a74;
+  --accent-gray: #edefee;
+  --accent-dark-gray: #333333;
 }
 
 code {

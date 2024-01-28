@@ -6,7 +6,7 @@ function Specials({ image, price, name, description }) {
             <div className='specials-image-wrapper'>
                 <img src={image} alt={name} />
             </div>
-            <div class="special-bottom-wrapper">
+            <div className="special-bottom-wrapper">
                 <div className='special-name-price'>
                     <p className='special-name'>{name}</p>
                     <p className='special-price'>${price}</p>

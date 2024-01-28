@@ -16,14 +16,18 @@
   text-decoration: none;
 }
 
+.navlist .active {
+  border-bottom: 5px solid var(--primary-yellow);
+}
+
 .navlist a {
   text-decoration: none;
   font-weight: bold;
-  color: #282c34;
+  color: var(--accent-dark-gray);
 }
 
 .cta-wrapper {
-  background: #4a5e57;
+  background: var(--primary-green);
 }
 
 .cta {
@@ -39,19 +43,19 @@
 .cta-title {
   font-size: 2.5rem;
   line-height: 0;
-  color: #f4ce14;
+  color: var(--primary-yellow);
 }
 
 .cta-location {
   font-size: 1.25rem;
   line-height: 0;
-  color: #fff;
+  color: var(--accent-gray);
 }
 
 .cta-desc {
   font-size: 1.125rem;
   text-align: justify;
-  color: wheat;
+  color: var(--accent-gray);
 }
 
 .cta-image-container {
@@ -70,11 +74,18 @@
   margin-block: 1em;
   font-size: 1rem;
   padding: 0.75em 1.25em;
-  background: #f4ce14;
+  background: var(--primary-yellow);
   border-radius: 1.125em;
   cursor: pointer;
   font-weight: bold;
   display: inline-block;
+  transition: background ease 400ms;
+}
+
+.cta-button:hover {
+  background: var(--primary-green);
+  color: var(--accent-gray);
+  outline: var(--primary-yellow) 2px solid;
 }
 
 .right {
@@ -84,7 +95,7 @@
 .specials {
   width: calc(var(--max-width) / 3);
   overflow: hidden;
-  background: #edefee;
+  background: var(--accent-gray);
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
   padding-bottom: 2em;
@@ -109,7 +120,7 @@
 }
 
 .special-price {
-  color: #f4ce14;
+  color: var(--secondary-orange);
 }
 
 .special-desc {
@@ -155,9 +166,17 @@
 .online-menu-button {
   all: unset;
   padding: 0.75em 1.25em;
-  background: #f4ce14;
+  background: var(--primary-yellow);
   border-radius: 40px;
   font-weight: 700;
+  cursor: pointer;
+  transition: background 400ms ease;
+}
+
+.online-menu-button:hover {
+  background: var(--accent-gray);
+  color: var(--primary-green);
+  outline: var(--primary-yellow) 2px solid;
 }
 
 .title-special {
@@ -171,7 +190,7 @@ footer {
 
 .footer-upper-bar {
   border: 0;
-  border-top: 3px solid #f4ce14;
+  border-top: 3px solid var(--primary-yellow);
 }
 
 .footer-wrapper {
@@ -189,89 +208,111 @@ footer {
 
 .footer-socials > * {
   text-decoration: none;
-  color: #4a5e57;
+  color: var(--accent-dark-gray);
   font-weight: 600;
 }
 
 /* Reserve Table Page */
-.reserve-table-wrapper {
-  background-image: url("../public/assets/restaurant.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-height: 80vh;
-  height: 80vh;
+.registration_header {
+  width: 100%;
+  background: var(--primary-green);
+  padding-block: 1em;
+  color: var(--accent-gray);
+  text-align: center;
 }
 
 .form {
-  border: 1px solid #f4ce14;
-  padding: 1rem;
-  border-radius: 20px;
-  background: rgba(76, 93, 87, 0.6);
+  width: 30vw;
+  margin: 0 auto;
 }
 
 .form-container {
-  display: grid;
-  grid-template-rows: auto;
-  gap: 1.24em;
-  margin-inline: auto;
-  min-width: 300px;
-  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container > * {
+  margin-bottom: 1em;
 }
 
 .form-group {
-  min-width: 300px;
-  display: grid;
-  place-content: center;
-  grid-template-columns: 0.5fr 1fr;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
 }
 
-.form-group > span {
-  font-weight: bold;
-  font-size: 1.124rem;
+.reg_span {
+  color: var(--primary-green);
+  font-size: 1.125em;
+  font-weight: 600;
 }
 
 .form-input {
-  flex: 1;
-  padding: 0.3em 1.25em;
-  font-size: 1.123rem;
-  background: transparent;
-  border: 1px solid #f4ce14;
-  border-radius: 10px;
-  color: whitesmoke;
-}
-
-.form-wrapper {
-  backdrop-filter: blur(5px);
-  height: inherit;
-  display: grid;
-  place-content: center;
+  padding: 0.6em 1.125em;
+  border: 0;
+  font-size: 1.25em;
+  border-radius: 0.25em;
+  outline: var(--primary-green) 2px solid;
 }
 
 .form-submit {
-  background: #f4ce14;
-  padding-block: 0.8em;
-  border-radius: 20px;
-  border: 1px solid #4a5e57;
+  outline: none;
+  background: var(--primary-yellow);
+  color: var(--primary-green);
+  font-weight: 600;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 1.125rem;
+  border-radius: 20em;
 }
 
-.modal {
-  position: absolute;
+.form-submit:hover {
+  background: var(--accent-gray);
+  color: var(--accent-dark-gray);
+  outline: var(--primary-yellow) 2px solid;
+}
+
+/* Reservation Confirmation page */
+.reservation {
+  width: 100%;
+  text-align: center;
+  border-top: 5px solid var(--primary-green);
+  display: flex;
+  flex-direction: column;
+}
+
+.reser_message {
+  color: var(--primary-green);
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+.reser_message_sub {
+  color: var(--accent-dark-gray);
+}
+
+.construction {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bolder;
+  padding-block: 2em;
+  background: var(--primary-green);
+  color: var(--accent-gray);
+}
+
+.toast {
+  position: fixed;
   top: 0;
   right: 50%;
-  left: 50%;
-  border: 1px solid red;
-  transform: translate(-50%, 50%);
-  width: 300px;
-  padding: 1em;
-  border-radius: 20px;
-  background: #fff;
-  transition: transform ease-in-out 500ms;
+  transform: translate(50%, -200%);
+  background: var(--secondary-orange);
+  font-size: 1.5em;
+  padding: 0.25em 1.125em;
+  border-radius: 20em;
+  font-weight: bold;
+  display: grid;
+  place-content: center;
+  transition: transform 600ms ease-in-out;
 }
 
-.hideModal {
-  transform: translate(-50%, -200%);
+.toast.show {
+  transform: translate(50%, 50%);
 }
