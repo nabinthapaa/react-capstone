@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import "./App.css";
+import About from './Pages/About';
 import ConfirmedBooking from './Pages/ConfirmedBooking';
 import Home from './Pages/Home';
 import PageUnderConstruction from './Pages/PageUnderConstruction';
@@ -17,7 +18,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/reservation' element={<ReserveTable />} />
-        <Route path='/about' element={<PageUnderConstruction />} />
+        <Route path='/about' element={<About />} />
         <Route path='/menu' element={<PageUnderConstruction />} />
         <Route path='/order-online' element={<PageUnderConstruction />} />
         <Route path='/login' element={<PageUnderConstruction />} />

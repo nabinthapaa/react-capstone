@@ -316,3 +316,38 @@ footer {
 .toast.show {
   transform: translate(50%, 50%);
 }
+
+.about-heading {
+  font-weight: bold;
+  color: var(--accent-gray);
+  width: 100%;
+  background-color: var(--primary-green);
+  padding: 1em 1em;
+  text-align: center;
+}
+
+.about-section {
+  text-align: justify;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.image-container {
+  width: 30rem;
+  height: 100%;
+  border: 1px solid red;
+  place-self: center;
+  position: relative;
+  object-fit: cover;
+  border-radius: 2em;
+  overflow: hidden;
+}
+
+.section-image {
+  object-fit: cover;
+  width: inherit;
+  height: inherit;
+}
